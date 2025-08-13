@@ -1,0 +1,6 @@
+2025-08-12 13:00:50.417 +02:00 [DBG] Hosting starting
+2025-08-12 13:00:50.824 +02:00 [INF] Now listening on: http://localhost:5110
+2025-08-12 13:00:50.827 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-12 13:00:50.828 +02:00 [INF] Hosting environment: Development
+2025-08-12 13:00:50.829 +02:00 [INF] Content root path: C:\Users\NicolaiPrang\RiderProjects\2WeekCaseApi\2WeekCaseApi
+2025-08-12 13:00:50.830 +02:00 [DBG] Hosting started

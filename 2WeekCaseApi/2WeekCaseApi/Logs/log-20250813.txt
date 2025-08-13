@@ -1,0 +1,187 @@
+2025-08-13 08:36:20.394 +02:00 [DBG] Hosting starting
+2025-08-13 08:36:20.588 +02:00 [INF] Now listening on: http://localhost:5110
+2025-08-13 08:36:20.591 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-13 08:36:20.591 +02:00 [INF] Hosting environment: Development
+2025-08-13 08:36:20.592 +02:00 [INF] Content root path: C:\Users\NicolaiPrang\RiderProjects\2WeekCaseApi\2WeekCaseApi
+2025-08-13 08:36:20.593 +02:00 [DBG] Hosting started
+2025-08-13 08:51:03.345 +02:00 [DBG] Hosting starting
+2025-08-13 08:51:03.548 +02:00 [INF] Now listening on: http://localhost:5110
+2025-08-13 08:51:03.550 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-13 08:51:03.551 +02:00 [INF] Hosting environment: Development
+2025-08-13 08:51:03.551 +02:00 [INF] Content root path: C:\Users\NicolaiPrang\RiderProjects\2WeekCaseApi\2WeekCaseApi
+2025-08-13 08:51:03.552 +02:00 [DBG] Hosting started
+2025-08-13 08:52:17.971 +02:00 [DBG] Hosting starting
+2025-08-13 08:52:18.141 +02:00 [INF] Now listening on: http://localhost:5110
+2025-08-13 08:52:18.145 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-13 08:52:18.146 +02:00 [INF] Hosting environment: Development
+2025-08-13 08:52:18.147 +02:00 [INF] Content root path: C:\Users\NicolaiPrang\RiderProjects\2WeekCaseApi\2WeekCaseApi
+2025-08-13 08:52:18.148 +02:00 [DBG] Hosting started
+2025-08-13 08:52:50.156 +02:00 [WRN] Failed to determine the https port for redirect.
+2025-08-13 08:52:50.184 +02:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-13 08:52:50.378 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-08-13 08:52:50.465 +02:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-13 08:52:50.898 +02:00 [DBG] Entity Framework Core 8.0.19 initialized 'WeatherContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:8.0.11+52a6b9f2ddd23fcabd1c673b4a2e273495129481' with options: None
+2025-08-13 08:52:50.933 +02:00 [DBG] Compiling query expression: 
+'DbSet<WeatherData>()
+    .Take(__p_0)
+    .OrderByDescending(d => d.Reading_Time)'
+2025-08-13 08:52:51.039 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-08-13 08:52:51.110 +02:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<WeatherData>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: WeatherData.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: WeatherData.CreatedAt (DateTimeOffset) Required, 1], [Property: WeatherData.Humidity (float) Required, 2], [Property: WeatherData.Pressure (float) Required, 3], [Property: WeatherData.Reading_Time (DateTimeOffset) Required, 4], [Property: WeatherData.Temperature (float) Required, 5], [Property: WeatherData.UpdatedAt (DateTimeOffset?), 6] }
+        SELECT t.Id, t.CreatedAt, t.Humidity, t.Pressure, t.Reading_Time, t.Temperature, t.UpdatedAt
+        FROM 
+        (
+            SELECT TOP(@__p_0) d.Id, d.CreatedAt, d.Humidity, d.Pressure, d.Reading_Time, d.Temperature, d.UpdatedAt
+            FROM Data AS d
+        ) AS t
+        ORDER BY t.Reading_Time DESC), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, WeatherData>, 
+    Infrastructure.Persistence.WeatherContext, 
+    False, 
+    False, 
+    True
+)'
+2025-08-13 08:52:51.142 +02:00 [DBG] Creating DbConnection.
+2025-08-13 08:52:51.173 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Infrastructure.Persistence.WeatherContext'.
+System.ArgumentException: Couldn't set trusted_connection (Parameter 'trusted_connection')
+ ---> System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at Npgsql.NpgsqlConnectionStringBuilder.GeneratedActions(GeneratedAction action, String keyword, Object& value)
+   at Npgsql.NpgsqlConnectionStringBuilder.set_Item(String keyword, Object value)
+   --- End of inner exception stack trace ---
+   at Npgsql.NpgsqlConnectionStringBuilder.set_Item(String keyword, Object value)
+   at System.Data.Common.DbConnectionStringBuilder.set_ConnectionString(String value)
+   at Npgsql.NpgsqlConnectionStringBuilder..ctor(String connectionString)
+   at Npgsql.NpgsqlConnection.SetupDataSource()
+   at Npgsql.NpgsqlConnection.set_ConnectionString(String value)
+   at Npgsql.NpgsqlConnection..ctor(String connectionString)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlRelationalConnection.CreateDbConnection()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.get_DbConnection()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.ArgumentException: Couldn't set trusted_connection (Parameter 'trusted_connection')
+ ---> System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at Npgsql.NpgsqlConnectionStringBuilder.GeneratedActions(GeneratedAction action, String keyword, Object& value)
+   at Npgsql.NpgsqlConnectionStringBuilder.set_Item(String keyword, Object value)
+   --- End of inner exception stack trace ---
+   at Npgsql.NpgsqlConnectionStringBuilder.set_Item(String keyword, Object value)
+   at System.Data.Common.DbConnectionStringBuilder.set_ConnectionString(String value)
+   at Npgsql.NpgsqlConnectionStringBuilder..ctor(String connectionString)
+   at Npgsql.NpgsqlConnection.SetupDataSource()
+   at Npgsql.NpgsqlConnection.set_ConnectionString(String value)
+   at Npgsql.NpgsqlConnection..ctor(String connectionString)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlRelationalConnection.CreateDbConnection()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.get_DbConnection()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-13 08:54:16.885 +02:00 [DBG] Hosting starting
+2025-08-13 08:54:17.013 +02:00 [INF] Now listening on: http://localhost:5110
+2025-08-13 08:54:17.015 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-13 08:54:17.016 +02:00 [INF] Hosting environment: Development
+2025-08-13 08:54:17.017 +02:00 [INF] Content root path: C:\Users\NicolaiPrang\RiderProjects\2WeekCaseApi\2WeekCaseApi
+2025-08-13 08:54:17.017 +02:00 [DBG] Hosting started
+2025-08-13 08:54:23.183 +02:00 [WRN] Failed to determine the https port for redirect.
+2025-08-13 08:54:23.200 +02:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-13 08:54:23.337 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-08-13 08:54:23.398 +02:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-08-13 08:54:23.738 +02:00 [DBG] Entity Framework Core 8.0.19 initialized 'WeatherContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.19' with options: None
+2025-08-13 08:54:23.805 +02:00 [DBG] Compiling query expression: 
+'DbSet<WeatherData>()
+    .Take(__p_0)
+    .OrderByDescending(d => d.Reading_Time)'
+2025-08-13 08:54:23.892 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-08-13 08:54:23.972 +02:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<WeatherData>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: WeatherData.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: WeatherData.CreatedAt (DateTimeOffset) Required, 1], [Property: WeatherData.Humidity (float) Required, 2], [Property: WeatherData.Pressure (float) Required, 3], [Property: WeatherData.Reading_Time (DateTimeOffset) Required, 4], [Property: WeatherData.Temperature (float) Required, 5], [Property: WeatherData.UpdatedAt (DateTimeOffset?), 6] }
+        SELECT t.Id, t.CreatedAt, t.Humidity, t.Pressure, t.Reading_Time, t.Temperature, t.UpdatedAt
+        FROM 
+        (
+            SELECT TOP(@__p_0) d.Id, d.CreatedAt, d.Humidity, d.Pressure, d.Reading_Time, d.Temperature, d.UpdatedAt
+            FROM Data AS d
+        ) AS t
+        ORDER BY t.Reading_Time DESC), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, WeatherData>, 
+    Infrastructure.Persistence.WeatherContext, 
+    False, 
+    False, 
+    True
+)'
+2025-08-13 08:54:24.000 +02:00 [DBG] Creating DbConnection.
+2025-08-13 08:54:24.036 +02:00 [DBG] Created DbConnection. (29ms).
+2025-08-13 08:54:24.053 +02:00 [DBG] Opening connection to database 'weather' on server '(localdb)\MSSQLLocalDB'.
+2025-08-13 08:54:25.547 +02:00 [ERR] An error occurred using the connection to database 'weather' on server '(localdb)\MSSQLLocalDB'.
+2025-08-13 08:54:25.566 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Infrastructure.Persistence.WeatherContext'.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "weather" requested by the login. The login failed.
+Login failed for user 'AzureAD\NicolaiPrang'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+ClientConnectionId:81c8f345-420f-4d5b-b2bd-dab5ee54a0bc
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "weather" requested by the login. The login failed.
+Login failed for user 'AzureAD\NicolaiPrang'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+ClientConnectionId:81c8f345-420f-4d5b-b2bd-dab5ee54a0bc
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()

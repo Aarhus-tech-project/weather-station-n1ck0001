@@ -1,0 +1,6 @@
+@_2WeekCaseApi_HostAddress = http://localhost:5110
+
+GET {{_2WeekCaseApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

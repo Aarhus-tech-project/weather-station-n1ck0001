@@ -1,0 +1,30 @@
+2025-08-07 09:29:22.570 +02:00 [DBG] Hosting starting
+2025-08-07 09:29:22.748 +02:00 [INF] Now listening on: http://localhost:5110
+2025-08-07 09:29:22.750 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-07 09:29:22.751 +02:00 [INF] Hosting environment: Development
+2025-08-07 09:29:22.752 +02:00 [INF] Content root path: C:\Users\NicolaiPrang\RiderProjects\2WeekCaseApi\2WeekCaseApi
+2025-08-07 09:29:22.752 +02:00 [DBG] Hosting started
+2025-08-07 09:37:04.386 +02:00 [DBG] Hosting starting
+2025-08-07 09:37:04.530 +02:00 [INF] Now listening on: http://localhost:5110
+2025-08-07 09:37:04.533 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-07 09:37:04.534 +02:00 [INF] Hosting environment: Development
+2025-08-07 09:37:04.534 +02:00 [INF] Content root path: C:\Users\NicolaiPrang\RiderProjects\2WeekCaseApi\2WeekCaseApi
+2025-08-07 09:37:04.535 +02:00 [DBG] Hosting started
+2025-08-07 09:50:00.255 +02:00 [DBG] Hosting starting
+2025-08-07 09:50:00.387 +02:00 [INF] Now listening on: http://localhost:5110
+2025-08-07 09:50:00.389 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-07 09:50:00.390 +02:00 [INF] Hosting environment: Development
+2025-08-07 09:50:00.390 +02:00 [INF] Content root path: C:\Users\NicolaiPrang\RiderProjects\2WeekCaseApi\2WeekCaseApi
+2025-08-07 09:50:00.391 +02:00 [DBG] Hosting started
+2025-08-07 12:57:58.320 +02:00 [DBG] Hosting starting
+2025-08-07 12:57:58.537 +02:00 [INF] Now listening on: http://localhost:5110
+2025-08-07 12:57:58.541 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-07 12:57:58.542 +02:00 [INF] Hosting environment: Development
+2025-08-07 12:57:58.543 +02:00 [INF] Content root path: C:\Users\NicolaiPrang\RiderProjects\2WeekCaseApi\2WeekCaseApi
+2025-08-07 12:57:58.544 +02:00 [DBG] Hosting started
+2025-08-07 13:02:28.982 +02:00 [DBG] Hosting starting
+2025-08-07 13:02:29.116 +02:00 [INF] Now listening on: http://localhost:5110
+2025-08-07 13:02:29.118 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-07 13:02:29.119 +02:00 [INF] Hosting environment: Development
+2025-08-07 13:02:29.120 +02:00 [INF] Content root path: C:\Users\NicolaiPrang\RiderProjects\2WeekCaseApi\2WeekCaseApi
+2025-08-07 13:02:29.120 +02:00 [DBG] Hosting started
