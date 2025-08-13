@@ -1,3 +1,7 @@
+/*
+
+old code 
+
 // mqtt_mysql_logger.cpp
 #include <iostream>
 #include <string>
