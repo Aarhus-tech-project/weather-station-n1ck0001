@@ -1,8 +1,8 @@
-Wi-Fi: h4prog
-Wi-Fi password: 1234567890
+- Wi-Fi: h4prog
+- Wi-Fi password: 1234567890
 
-Usernames used in the project: Nick / Root
-Passwords used in the project: Datait2025! / password
+- Usernames used in the project: Nick / Root
+- Passwords used in the project: Datait2025! / password
 
 IP addresses:
 - ESXi (VM host): 172.31.0.10
